@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dot="$(cd "$(dirname "$0")"; pwd)"
+path="$dot/"
+
+sudo mkdir $path
+
+echo Insert Name of File
+
+read who
+
+#sudo echo Hello, $who! > "$path/output_echo.txt"
+
+ffmpeg -i $who -b 1000000 output.mp4
